@@ -1,0 +1,16 @@
+La 1, 2 am implementat intocmai algoritmii dati.
+
+La 3 am dedus formula pentru lambda_min(i), respectiv lambda_max(i) la fiecare pas, calculez valoarea si actualizez minimul sau maximul daca este nevoie.
+Astfel lambda_min(i) = d - abs(s(k-1)) - abs(s(k)); cu mentiunea ca trebuie tinut cont de cazurile limita (primul respectiv ultimul). lambda_max se calculeaza analog.
+
+La 4 am implementat algoritmul dat. Astfel calculeaz mijlocul intervalului si il maresc/micsorez daca este nevoie atfel incat sa cuprinda exact atatea valori proprii cate corespund la pasul curent.
+
+La 5 am folosit direct doar 2 functii, iar pe a 3-a (nrValProprii) o apelez indirect prin IntervaleValProprii. Am implementat metoda bisectiei asa cum este data in laborator cu conditia de oprire abs(f(x)) < eps.
+
+La 6 am implement algoritmul Thomas asa cum este dat la laborator, si am dedus formula pentru y' * A * y = lambda. Fac asta in 2 pasi:
+1) ytemp = y' * A => vector linie
+2) lambda = ytemp * y
+
+Conditia de oprire este abs(h-h0) < eps sau p < maxIter. Aceasta conditie imi dadea vectori proprii de sens opus celor din checker-ul initial. Am vazut ca s-au facut modificari astfel incat sa fie acceptate si aceste solutii, deci am lasat-o asa.
+
+
